@@ -2,12 +2,11 @@
 
 ### HTML
 
-Enter your reflections on this section here.
+I used the course slides along with a few HTML websites to guide me.
 
 ### Accessibility
 
-Enter your reflections on this section here.
+I think I did a great job with accessibility — I used meaningful alt text and structured the content well.
 
 ### CSS
-
-Enter your reflections on this section here.
+I haven’t used CSS yet, but I plan to add styling later.
