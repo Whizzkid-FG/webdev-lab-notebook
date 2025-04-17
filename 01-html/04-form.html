@@ -5,11 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Exercise 04 - Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      table.form-table {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        border-collapse: collapse;
+      }
+      table.form-table td {
+        padding: 10px;
+        vertical-align: top;
+      }
+      table.form-table td:first-child {
+        font-weight: bold;
+        width: 120px;
+      }
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+      .options {
+        margin-left: 20px;
+      }
+      .option {
+        margin-bottom: 5px;
+      }
+      .buttons {
+        margin-top: 20px;
+        text-align: center;
+      }
+      button {
+        padding: 8px 20px;
+        margin: 0 10px;
+      }
+    </style>
   </head>
   <body>
     <main>
+      <h1>Form</h1>
       <form action="/submit">
-        <!-- Add your code here -->
+        <table class="form-table">
+          <tr>
+            <td>Name:</td>
+            <td><input type="text" id="name" name="name"></td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td><input type="email" id="email" name="email"></td>
+          </tr>
+          <tr>
+            <td>Favorite Character:</td>
+            <td>
+              <div class="options">
+                <div class="option">
+                  <input type="radio" id="spongebob" name="character" value="Spongebob">
+                  <label for="spongebob">Spongebob</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="sandy" name="character" value="Sandy">
+                  <label for="sandy">Sandy</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="patrick" name="character" value="Patrick">
+                  <label for="patrick">Patrick</label>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Are you a fan of the show?</td>
+            <td>
+              <div class="options">
+                <div class="option">
+                  <input type="checkbox" id="fan1" name="fan" value="watched_all">
+                  <label for="fan1">Yes, I have watched all episodes!</label>
+                </div>
+                <div class="option">
+                  <input type="checkbox" id="fan2" name="fan" value="best_memes">
+                  <label for="fan2">Yes, it's got the best memes.</label>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="buttons">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
       </form>
     </main>
   </body>
