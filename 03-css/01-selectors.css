@@ -6,6 +6,12 @@
   --royalblue: #4169e1;
   --teal: #008080;
   --violet: #9400d3;
+  --red: #ff0000;
+  --green: #008000;
+  --yellow: #ffff00;
+  --blue: #0000ff;
+  --orange: #ffa500;
+  --gray: #808080;
 }
 
 /* Use attribute selectors for the first part of the exercise */
@@ -14,7 +20,60 @@ li[class] {
   color: var(--red);
 }
 
+/* Target the element with id "cat" */
+#cat {
+  color: var(--blue);
+  font-weight: bold;
+}
+/* Target the element with class "parrot" */
+.parrot {
+  color: var(--green);
+  font-style: italic;
+}
+
 /* Use descendant, child, and sibling selectors for the second part */
+/* Style all <li> elements inside <ol> in the "lsit-food" section */
+.list-food ol li {
+  background-color: var(--yellow);
+  padding: 5px;
+}
+
+/* Style the direct <div> child of "list-food" */
+.list-food > div:first-child {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Stylethe <div> sibling of the <ol> in the "list-food" secttion */
+.list-food > div + ol {
+  color: var(--gray);
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+/* Style all <li> elements inside <ol> in the "list-cleaning" section */
+.list-cleaning ol li {
+  background-color: var(--teal);
+  color: white;
+  padding: 5px;
+}
+
+/* Style the <p> child of the "list-cleaning" section */
+.list-cleaning > p {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Style <li> elements with specific classes */
+.li.first {
+  color: var(--green);
+  font-weight: bold;
+}
+
+li.second {
+  color: var(--orange);
+  font-style: bold;
+}
 
 section li {
   color: var(--green);

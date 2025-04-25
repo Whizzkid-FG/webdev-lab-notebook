@@ -1,4 +1,12 @@
 .container {
   width: 600px;
   margin: 40px auto;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Increase the size of the first letter in each paragraph */
+.paragraph::first-letter {
+  font-size: 3em;
+  font-weight: bold;
 }
