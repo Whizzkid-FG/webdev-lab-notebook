@@ -1,5 +1,3 @@
-/* CSS custom properties / CSS variables */
-
 :root {
   --darkmagenta: #8b008b;
   --magenta: #ff00ff;
@@ -14,67 +12,77 @@
   --gray: #808080;
 }
 
-/* Use attribute selectors for the first part of the exercise */
+/* Attribute Selectors */
 
+/* Any <li> with a class attribute */
 li[class] {
-  color: var(--red);
+  color: var(--magenta);
 }
 
-/* Target the element with id "cat" */
+/* Specific selectors override generic ones */
 #cat {
   color: var(--blue);
   font-weight: bold;
 }
-/* Target the element with class "parrot" */
+
 .parrot {
   color: var(--green);
   font-style: italic;
 }
 
-/* Use descendant, child, and sibling selectors for the second part */
-/* Style all <li> elements inside <ol> in the "lsit-food" section */
-.list-food ol li {
-  background-color: var(--yellow);
-  padding: 5px;
+.donkey {
+  color: var(--royalblue);
 }
 
-/* Style the direct <div> child of "list-food" */
+.hedgehog {
+  color: var(--violet);
+}
+
+.cat.dog.parrot {
+  color: var(--royalblue);
+}
+
+/* Parent and Sibling Selectors */
+
+/* Bold header under list-food */
 .list-food > div:first-child {
-  font-size: 1.2em;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Styling the <ol> under list-food */
+.list-food ol li:first-child {
+  color: var(--green);
   font-weight: bold;
 }
 
-/* Stylethe <div> sibling of the <ol> in the "list-food" secttion */
-.list-food > div + ol {
-  color: var(--gray);
-  font-size: 0.9em;
+.list-food ol li:nth-child(2) {
+  color: var(--magenta);
+}
+
+.list-food ol li:nth-child(3) {
+  color: black;
+}
+
+.list-food ol li:nth-child(4) {
+  color: var(--purple);
+}
+
+/* Small text note */
+.list-food > div + ol + div {
+  font-size: 0.8em;
   font-style: italic;
+  color: var(--gray);
 }
 
-/* Style all <li> elements inside <ol> in the "list-cleaning" section */
-.list-cleaning ol li {
-  background-color: var(--teal);
-  color: white;
-  padding: 5px;
-}
-
-/* Style the <p> child of the "list-cleaning" section */
+/* Underlined heading in cleaning section */
 .list-cleaning > p {
   text-decoration: underline;
   font-weight: bold;
 }
 
-/* Style <li> elements with specific classes */
-.li.first {
+/* Cleaning list items */
+.list-cleaning ol li {
   color: var(--green);
   font-weight: bold;
-}
-
-li.second {
-  color: var(--orange);
-  font-style: bold;
-}
-
-section li {
-  color: var(--green);
 }

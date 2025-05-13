@@ -2,11 +2,62 @@
   --darkviolet: #9400d3;
   --maroon: #800000;
   --darkgolden: #8f6805;
+  --purple: #800080;
+  --white: #ffffff;
+}
+
+/* Margin and Padding */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
 }
 
 .box {
   padding: 10px;
   color: var(--white);
+  font-size: 1.2em;
+}
+
+/* Top absolute banner */
+.absolute {
+  background-color: var(--maroon);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+}
+
+/* Bottom fixed banner */
+.fixed {
+  background-color: var(--darkgolden);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+}
+
+/* Flex container for center */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: calc(100vh - 100px); /* 50px top + 50px bottom */
+  padding: 0 20px;
+}
+
+/* side-by-side layout */
+.static,
+.relative {
+  width: 300px;
+  height: 400px;
 }
 
 .static {
@@ -15,12 +66,5 @@
 
 .relative {
   background-color: var(--purple);
-}
-
-.absolute {
-  background-color: var(--maroon);
-}
-
-.fixed {
-  background-color: var(--darkgolden);
+  position: relative;
 }
