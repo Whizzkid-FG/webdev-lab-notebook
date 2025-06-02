@@ -53,6 +53,7 @@ const fetchData = (url) => {
     });
 };
 
+
 fetchData(url);
 // Fetch all books from the API of Ice and Fire and append them to the DOM
 // Create an element for each book that contains title, author, publication year, and number of pages
