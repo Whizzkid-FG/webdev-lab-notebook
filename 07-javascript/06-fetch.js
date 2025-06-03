@@ -22,7 +22,7 @@ const fetchData = (url) => {
           const bookElement = document.createElement("div");
           bookElement.classList.add("mb-4", "text-center");
 
-          const title = document.createElement("h3");
+          const title = document.createElement("h2");
           title.textContent = book.name;
 
           const author = document.createElement("p");
